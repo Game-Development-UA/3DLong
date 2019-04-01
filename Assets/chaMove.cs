@@ -34,9 +34,9 @@ public class chaMove : MonoBehaviour
         if (Mathf.Abs(v) > 0.1)//判断是否按下键WS
         {
             //第二种方法，用Translate
-            if (Input.GetKey(KeyCode.W))
+            if (Input.GetKey(KeyCode.UpArrow))
                 tran.Translate(Vector3.forward * speed);
-            else if (Input.GetKey(KeyCode.S))
+            else if (Input.GetKey(KeyCode.DownArrow))
                 tran.Translate(Vector3.back * speed);
 
             m_animator.SetBool("run", true);//播放行走动画
