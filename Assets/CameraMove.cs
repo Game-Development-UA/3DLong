@@ -6,6 +6,7 @@ public class CameraMove : MonoBehaviour
 {
     public Transform man;
     public float speed;
+    public float rotateSpeed = 0.01F;
 
     // Start is called before the first frame update
     void Start()
@@ -14,7 +15,7 @@ public class CameraMove : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
 
         Vector3 target = new Vector3(man.position.x, transform.position.y, man.position.z-5);

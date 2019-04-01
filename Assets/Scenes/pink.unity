@@ -522,6 +522,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1009431723}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &141807854
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141807853}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 478029a5168ed4cd9a7820c9887f5484, type: 3}
+  m_Controller: {fileID: 9100000, guid: 965cf1849befb4d428bb3dcb6ed53bf7, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &141807855 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400202, guid: 478029a5168ed4cd9a7820c9887f5484,
@@ -1091,6 +1110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   man: {fileID: 141807855}
   speed: 5
+  rotateSpeed: 2
 --- !u!95 &511874240
 Animator:
   serializedVersion: 3
@@ -1159,13 +1179,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511874238}
-  m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: 15.17, y: 2.66, z: -14.26}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 15.17, y: 1.6999999, z: -14.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &536469987
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2556,6 +2576,14 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: 478029a5168ed4cd9a7820c9887f5484, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 478029a5168ed4cd9a7820c9887f5484, type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 478029a5168ed4cd9a7820c9887f5484, type: 3}
+      propertyPath: m_CullingMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 478029a5168ed4cd9a7820c9887f5484, type: 3}
