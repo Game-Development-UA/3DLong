@@ -16,6 +16,7 @@ public class CameraMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         Vector3 target = new Vector3(man.position.x, transform.position.y, man.position.z-5);
 
         transform.position = Vector3.MoveTowards(transform.position, target, Time.deltaTime * speed);

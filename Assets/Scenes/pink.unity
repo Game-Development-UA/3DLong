@@ -528,21 +528,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1009431723}
   m_PrefabAsset: {fileID: 0}
---- !u!111 &141807856
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 141807853}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 478029a5168ed4cd9a7820c9887f5484, type: 3}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!114 &141807857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,6 +541,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
+  rotateSpeed: 3
+--- !u!143 &141807858
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141807853}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &156561684
 GameObject:
   m_ObjectHideFlags: 0
@@ -2549,6 +2553,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 965cf1849befb4d428bb3dcb6ed53bf7, type: 2}
+    - target: {fileID: 9500000, guid: 478029a5168ed4cd9a7820c9887f5484, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 478029a5168ed4cd9a7820c9887f5484, type: 3}
 --- !u!1 &1043571680
