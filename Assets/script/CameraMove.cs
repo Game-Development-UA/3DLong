@@ -8,6 +8,7 @@ public class CameraMove : MonoBehaviour
     public float speed;
     //public float rotateSpeed = 0.01F;
     public float dis;
+    public float heightDis;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,8 @@ public class CameraMove : MonoBehaviour
     void Update()
     {
 
-        Vector3 target = new Vector3(man.position.x, transform.position.y, man.position.z-dis);
+        float height = man.position.y + heightDis;
+        Vector3 target = new Vector3(man.position.x, height, man.position.z-dis);
 
         transform.position = Vector3.MoveTowards(transform.position, target, Time.deltaTime * speed);
     }
