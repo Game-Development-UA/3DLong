@@ -1110,7 +1110,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   man: {fileID: 141807855}
   speed: 5
-  rotateSpeed: 2
+  dis: 0
+  heightDis: 0
 --- !u!95 &511874240
 Animator:
   serializedVersion: 3
@@ -1180,7 +1181,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511874238}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.17, y: 1.6999999, z: -14.26}
+  m_LocalPosition: {x: 15.17, y: 2.46, z: -17.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

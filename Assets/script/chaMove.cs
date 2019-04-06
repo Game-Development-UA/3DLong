@@ -17,9 +17,9 @@ public class chaMove : MonoBehaviour
     void Update()
     {
 
-        float h = Input.GetAxis("Horizontal");//返回-1到1的实数值，可以来构造向量
+        float h = Input.GetAxis("Horizontal");
 
-        transform.Rotate(0, h * rotateSpeed, 0);//AD键水平旋转
+        transform.Rotate(0, h * rotateSpeed, 0);
 
         if (Input.GetKey(KeyCode.UpArrow))
             tran.Translate(Vector3.forward * speed);

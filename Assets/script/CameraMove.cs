@@ -12,6 +12,8 @@ public class CameraMove : MonoBehaviour
 
 
     float initalRotateY;
+    float initalRotateX;
+    float initalRotateZ;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,7 @@ public class CameraMove : MonoBehaviour
 
         float height = man.position.y + heightDis;
         Vector3 target = new Vector3(man.position.x, height, man.position.z-dis);
-
+        
         if (Input.GetAxis("Horizontal") != 0)
         {
             float rotateY = man.rotation.y - initalRotateY;
