@@ -5272,7 +5272,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   man: {fileID: 1468692761}
   speed: 10
-  dis: 6
+  dis: 5
+  heightDis: 3
 --- !u!20 &1257269096
 Camera:
   m_ObjectHideFlags: 0
@@ -5323,7 +5324,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257269092}
   m_LocalRotation: {x: 0.071777135, y: -0.01608335, z: -0.0016468391, w: 0.9972897}
-  m_LocalPosition: {x: 20.1, y: 4.7, z: -32.5}
+  m_LocalPosition: {x: 20.1, y: 4, z: -32.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6783,7 +6784,7 @@ CapsuleCollider:
   m_Radius: 0.5
   m_Height: 1.5
   m_Direction: 1
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!4 &1468692761 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400170, guid: 2803a3a6bd5c04eb4b71c88cae107a2e,
@@ -6818,7 +6819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31fed44ccc9d54192b725ff75e950497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 0.2
   rotateSpeed: 3
 --- !u!33 &1468692764
 MeshFilter:
