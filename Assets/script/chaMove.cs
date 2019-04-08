@@ -39,7 +39,7 @@ public class chaMove : MonoBehaviour
         // jump
         if (Input.GetAxis("Jump") != 0)
         {
-            tran.Translate(Vector3.up * speed);
+            tran.Translate(Vector3.up * speed*2);
         }
 
     }
