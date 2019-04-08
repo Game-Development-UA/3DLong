@@ -27,7 +27,6 @@ public class chaMove : MonoBehaviour
             tran.Translate(Vector3.forward * speed);
             act.SetBool("run", true);
         }
-
         else if (Input.GetKey(KeyCode.S))
         {
             tran.Translate(Vector3.back * speed);
@@ -41,6 +40,12 @@ public class chaMove : MonoBehaviour
         {
             tran.Translate(Vector3.up * speed*2);
         }
+
+        // attack
+        if (Input.GetKey(KeyCode.Q))
+            act.SetBool("attack", true);
+        else
+            act.SetBool("attack", false);
 
     }
         
