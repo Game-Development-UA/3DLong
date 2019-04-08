@@ -8,26 +8,40 @@ public class chaMove : MonoBehaviour
     public float rotateSpeed = 3.0F;
 
     private Transform tran;
+    private Animator act;
 
     void Start()
     {
         tran = gameObject.GetComponent<Transform>();
+        act = gameObject.GetComponent<Animator>();
     }
 
     void Update()
     {
-
+        // rotation
         float h = Input.GetAxis("Horizontal");
-
         transform.Rotate(0, h * rotateSpeed, 0);
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        // move
+        if (Input.GetKey(KeyCode.W)) {
             tran.Translate(Vector3.forward * speed);
-        else if (Input.GetKey(KeyCode.DownArrow))
+            act.SetBool("run", true);
+        }
+
+        else if (Input.GetKey(KeyCode.S))
+        {
             tran.Translate(Vector3.back * speed);
-           
-        
- 
+            act.SetBool("run", true);
+        }else
+            act.SetBool("run", false);
+
+
+        // jump
+        if (Input.GetAxis("Jump") != 0)
+        {
+            tran.Translate(Vector3.up * speed);
+        }
+
     }
         
 }
