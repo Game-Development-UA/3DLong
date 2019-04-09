@@ -44,5 +44,15 @@ public class chaMove : MonoBehaviour
             act.SetBool("attack", false);
 
     }
-        
+
+    private void OnTriggerEnter(Collider col)
+    {
+        Transform tree = col.GetComponent<Transform>();
+
+        if (tree != null)
+        {
+            transform.Translate(Random.Range(transform.position.x - 0.2f, transform.position.x + 0.2f),
+                                 transform.position.y + 1, Random.Range(transform.position.z - 0.2f, transform.position.z + 0.2f));
+        }
+    }
 }
