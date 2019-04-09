@@ -16,8 +16,10 @@ public class chaMove : MonoBehaviour
         act = gameObject.GetComponent<Animator>();
     }
 
+   
     void Update()
     {
+   
         // rotation
         float h = Input.GetAxis("Horizontal");
         transform.Rotate(0, h * rotateSpeed, 0);
@@ -43,16 +45,8 @@ public class chaMove : MonoBehaviour
         else
             act.SetBool("attack", false);
 
+
     }
 
-    private void OnTriggerEnter(Collider col)
-    {
-        Transform tree = col.GetComponent<Transform>();
 
-        if (tree != null)
-        {
-            transform.Translate(Random.Range(transform.position.x - 0.2f, transform.position.x + 0.2f),
-                                 transform.position.y + 1, Random.Range(transform.position.z - 0.2f, transform.position.z + 0.2f));
-        }
-    }
 }
