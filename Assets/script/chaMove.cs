@@ -16,10 +16,9 @@ public class chaMove : MonoBehaviour
         act = gameObject.GetComponent<Animator>();
     }
 
-   
+
     void Update()
     {
-   
         // rotation
         float h = Input.GetAxis("Horizontal");
         transform.Rotate(0, h * rotateSpeed, 0);
@@ -47,6 +46,5 @@ public class chaMove : MonoBehaviour
 
 
     }
-
 
 }
