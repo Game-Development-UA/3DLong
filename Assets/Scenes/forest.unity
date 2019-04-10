@@ -136,8 +136,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31fed44ccc9d54192b725ff75e950497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.4
+  speed: 0.3
   rotateSpeed: 3
+  sceneName: desert
 --- !u!136 &14071445
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8266,7 +8267,7 @@ GameObject:
   - component: {fileID: 1549149455}
   m_Layer: 1
   m_Name: wall (3)
-  m_TagString: Untagged
+  m_TagString: trans
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9286,7 +9287,7 @@ GameObject:
   - component: {fileID: 1774003839}
   m_Layer: 1
   m_Name: wall (1)
-  m_TagString: Untagged
+  m_TagString: trans
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11384,6 +11385,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall
       objectReference: {fileID: 0}
+    - target: {fileID: 7396524858203606325, guid: 9b59acecb2dc14beba56c23112349ec3,
+        type: 3}
+      propertyPath: m_TagString
+      value: trans
+      objectReference: {fileID: 0}
     - target: {fileID: 7396524858203606321, guid: 9b59acecb2dc14beba56c23112349ec3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11452,6 +11458,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: wall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797281745959404187, guid: 9f5583163448840c292b8736f701a48a,
+        type: 3}
+      propertyPath: m_TagString
+      value: trans
       objectReference: {fileID: 0}
     - target: {fileID: 7797281745959404191, guid: 9f5583163448840c292b8736f701a48a,
         type: 3}

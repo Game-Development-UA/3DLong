@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class chaMove : MonoBehaviour
 {
@@ -42,10 +43,10 @@ public class chaMove : MonoBehaviour
             act.SetBool("attack", true);
         else
             act.SetBool("attack", false);
-
-
+        
     }
 
+    public string sceneName; 
     void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.tag == "npc" && act.GetBool("attack"))
@@ -53,6 +54,12 @@ public class chaMove : MonoBehaviour
             print("kill!!");
             Destroy(col.gameObject);
         }
+
+        if (col.gameObject.tag == "trans") {
+            SceneManager.LoadScene(sceneName);
+        }
+
     }
+
 
 }

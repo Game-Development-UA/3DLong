@@ -6,6 +6,7 @@ TagManager:
   tags:
   - tree
   - npc
+  - trans
   layers:
   - Default
   - TransparentFX

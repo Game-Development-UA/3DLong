@@ -192,6 +192,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7396524858203606325, guid: 9b59acecb2dc14beba56c23112349ec3,
+        type: 3}
+      propertyPath: m_TagString
+      value: trans
+      objectReference: {fileID: 0}
     - target: {fileID: 7396524858203606321, guid: 9b59acecb2dc14beba56c23112349ec3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3171,6 +3176,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7396524858203606325, guid: 9b59acecb2dc14beba56c23112349ec3,
+        type: 3}
+      propertyPath: m_TagString
+      value: trans
+      objectReference: {fileID: 0}
     - target: {fileID: 7396524858203606321, guid: 9b59acecb2dc14beba56c23112349ec3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4280,9 +4290,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5008055909f754fdc8719110131d58d0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.879
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4386,6 +4396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.2
   rotateSpeed: 3
+  sceneName: forest
 --- !u!1001 &818834813
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6837,6 +6848,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7396524858203606325, guid: 9b59acecb2dc14beba56c23112349ec3,
+        type: 3}
+      propertyPath: m_TagString
+      value: trans
+      objectReference: {fileID: 0}
     - target: {fileID: 7396524858203606321, guid: 9b59acecb2dc14beba56c23112349ec3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8603,6 +8619,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: base
       objectReference: {fileID: 0}
+    - target: {fileID: 7396524858203606325, guid: 9b59acecb2dc14beba56c23112349ec3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7396524858203606321, guid: 9b59acecb2dc14beba56c23112349ec3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9926,6 +9947,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396524858203606325, guid: 9b59acecb2dc14beba56c23112349ec3,
+        type: 3}
+      propertyPath: m_TagString
+      value: trans
       objectReference: {fileID: 0}
     - target: {fileID: 7396524858203606321, guid: 9b59acecb2dc14beba56c23112349ec3,
         type: 3}
