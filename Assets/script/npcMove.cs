@@ -18,7 +18,7 @@ public class npcMove: MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (speed > 10 && timer > 0.05)
+        if (speed > 10 && timer > 0.08)
         {
             speed = 4;
         }
@@ -37,7 +37,7 @@ public class npcMove: MonoBehaviour
     {
         if (col.gameObject.tag == "tree")
         {
-            speed = 50;
+            speed = 80;
             timer = 0;
             dir_y = Random.Range(-100f, 100f);
             transform.Rotate(new Vector3(0, dir_y, 0));
