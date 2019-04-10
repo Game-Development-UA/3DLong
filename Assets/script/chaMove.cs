@@ -16,7 +16,6 @@ public class chaMove : MonoBehaviour
         act = gameObject.GetComponent<Animator>();
     }
 
-
     void Update()
     {
         // rotation
