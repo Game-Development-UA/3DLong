@@ -37,7 +37,6 @@ public class npcMove: MonoBehaviour
     {
         if (col.gameObject.tag == "tree")
         {
-            print("npc collision");
             speed = 50;
             timer = 0;
             dir_y = Random.Range(-100f, 100f);

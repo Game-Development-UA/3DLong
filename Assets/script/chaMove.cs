@@ -47,4 +47,13 @@ public class chaMove : MonoBehaviour
 
     }
 
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "npc" && act.GetBool("attack"))
+        {
+            print("kill!!");
+            Destroy(col.gameObject);
+        }
+    }
+
 }
