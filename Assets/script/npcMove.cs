@@ -5,7 +5,7 @@ using UnityEngine;
 public class npcMove: MonoBehaviour
 {
 
-    public float speed = 4;
+    public float speed = 5;
     private float timer = 0;
     private float dir_y = 0;
 

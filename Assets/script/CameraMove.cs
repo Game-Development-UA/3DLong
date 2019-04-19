@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour
 {
+
     public Transform target;
     Vector3 offset;
     // Use this for initialization
@@ -31,7 +32,7 @@ public class CameraMove : MonoBehaviour
         }
         offset = offset.normalized * dis;
     }
- 
+
     private void Rotate()
     {
         if (Input.GetMouseButton(1))
