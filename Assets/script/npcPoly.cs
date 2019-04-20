@@ -5,11 +5,11 @@ using UnityEngine;
 public class npcPoly : MonoBehaviour
 {
     public AudioClip die;
-
+    private AudioSource sound;
 
     public virtual void Start()
     {
-
+        sound = transform.gameObject.GetComponent<AudioSource>();
     }
 
     public virtual void OnCollisionEnter(Collision col)
@@ -25,7 +25,10 @@ public class npcPoly : MonoBehaviour
 
     public virtual void deathAffect()
     {
-
+        Animator npcAction = transform.gameObject.GetComponent<Animator>();
+        npcAction.SetBool("death", true);
+        sound.clip = die;
+        sound.Play();
     }
 
 }

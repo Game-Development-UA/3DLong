@@ -9,12 +9,13 @@ public class npcMove: MonoBehaviour
     private float timer = 0;
     private float dir_y = 0;
 
+    private Animator action;
     // Use this for initialization
     void Start()
     {
-
+        action = transform.gameObject.GetComponent<Animator>();
     }
-
+   
     void Update()
     {
         timer += Time.deltaTime;
@@ -22,14 +23,17 @@ public class npcMove: MonoBehaviour
         {
             speed = 4;
         }
-
-        if (timer > 2)
+        if (!action.GetBool("death"))
         {
-            dir_y = Random.Range(-50f, 50f); 
-            timer = 0;  
-            transform.Rotate(new Vector3(0, dir_y, 0));
+            if (timer > 2)
+            {
+                dir_y = Random.Range(-50f, 50f);
+                timer = 0;
+                transform.Rotate(new Vector3(0, dir_y, 0));
+            }
+            transform.position += transform.forward * speed * Time.deltaTime;
         }
-        transform.position += transform.forward * speed * Time.deltaTime;
+
 
     }
 

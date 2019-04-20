@@ -6,9 +6,7 @@ public class manDeath : npcPoly
 {
 
 
-    public override void Start()
-    {
 
-    }
+
 
 }
