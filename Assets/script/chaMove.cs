@@ -19,17 +19,20 @@ public class chaMove : MonoBehaviour
 
     void Update()
     {
+        if (!act.GetBool("attack"))
+        {
+            // move
+            if (Input.GetKey(KeyCode.W))
+            {
+                tran.Translate(Vector3.forward * speed);
+                act.SetBool("run", true);
+            }
+            else
+                act.SetBool("run", false);
+        }
         // rotation
         float h = Input.GetAxis("Horizontal");
         transform.Rotate(0, h * rotateSpeed, 0);
-
-        // move
-        if (Input.GetKey(KeyCode.W)) {
-            tran.Translate(Vector3.forward * speed);
-            act.SetBool("run", true);
-        }
-        else
-            act.SetBool("run", false);
 
 
         // jump
