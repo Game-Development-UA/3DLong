@@ -17,6 +17,7 @@ public class chaMove : MonoBehaviour
         act = gameObject.GetComponent<Animator>();
     }
 
+    private float timer = 0;
     void Update()
     {
         if (!act.GetBool("attack"))
@@ -41,11 +42,19 @@ public class chaMove : MonoBehaviour
             tran.Translate(Vector3.up * speed*2);
         }
 
+        timer += Time.deltaTime;
         // attack
         if (Input.GetKey(KeyCode.Q))
+        {
+            timer = 0;
             act.SetBool("attack", true);
-        else
+        }
+        else if (timer > 0.2)
+        {
+
             act.SetBool("attack", false);
+        }
+
         
     }
 
