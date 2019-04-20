@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class chaMove : MonoBehaviour
 {
-    public float speed = 0.5f;
-    public float rotateSpeed = 3.0F;
+    public float speed = 10f;
+    public float rotateSpeed = 1.5F;
 
     private Transform tran;
     private Animator act;
@@ -20,17 +20,17 @@ public class chaMove : MonoBehaviour
     private float timer = 0;
     void Update()
     {
-        if (!act.GetBool("attack"))
+        timer += Time.deltaTime;
+
+        // move
+        if (Input.GetKey(KeyCode.W))
         {
-            // move
-            if (Input.GetKey(KeyCode.W))
-            {
-                tran.Translate(Vector3.forward * speed);
-                act.SetBool("run", true);
-            }
-            else
-                act.SetBool("run", false);
+            tran.Translate(Vector3.forward * speed * Time.deltaTime);
+            act.SetBool("run", true);
         }
+        else
+            act.SetBool("run", false);
+        
         // rotation
         float h = Input.GetAxis("Horizontal");
         transform.Rotate(0, h * rotateSpeed, 0);
@@ -39,19 +39,17 @@ public class chaMove : MonoBehaviour
         // jump
         if (Input.GetAxis("Jump") != 0)
         {
-            tran.Translate(Vector3.up * speed*2);
+            tran.Translate(Vector3.up * speed*2*Time.deltaTime);
         }
 
-        timer += Time.deltaTime;
         // attack
         if (Input.GetKey(KeyCode.Q))
         {
             timer = 0;
             act.SetBool("attack", true);
         }
-        else if (timer > 0.2)
+        else if (timer > 0.4)
         {
-
             act.SetBool("attack", false);
         }
 

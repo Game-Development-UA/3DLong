@@ -5,8 +5,11 @@ using UnityEngine;
 public class CameraMove : MonoBehaviour
 {
 
-    public Transform target;
-    Vector3 offset;
+    public Transform target;//角色
+    public Vector3 offset;//角色与摄像机位置偏差值
+    private float _pointY;//玩家Y轴旋转角度
+    public float damping = 1;//摄像机旋转阻尼
+
     // Use this for initialization
     void Start()
     {
@@ -16,46 +19,19 @@ public class CameraMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = target.position + offset;
-        Rotate();
-        Scale();
-    }
+       
+            _pointY = target.eulerAngles.y;
+            Quaternion rotation = Quaternion.Euler(0, _pointY, 0);
+            transform.position = Vector3.Lerp(transform.position, target.position + (rotation * offset), 2*Time.deltaTime * damping);
+            transform.LookAt(target.position);
+        
 
-    private void Scale()
-    {
-        float dis = offset.magnitude;
-        dis += Input.GetAxis("Mouse ScrollWheel") * 5;
-        //Debug.Log("dis=" + dis);
-        if (dis < 10 || dis > 40)
-        {
-            return;
-        }
-        offset = offset.normalized * dis;
-    }
-
-    private void Rotate()
-    {
-        if (Input.GetMouseButton(1))
-        {
-            Vector3 pos = transform.position;
-            Vector3 rot = transform.eulerAngles;
-
-
-            transform.RotateAround(Vector3.zero, Vector3.up, Input.GetAxis("Mouse X") * 10);
-            transform.RotateAround(Vector3.zero, Vector3.left, Input.GetAxis("Mouse Y") * 10);
-            float x = transform.eulerAngles.x;
-            float y = transform.eulerAngles.y;
-            Debug.Log("x=" + x);
-            Debug.Log("y=" + y);
-
-            if (x < 20 || x > 45 || y < 0 || y > 40)
-            {
-                transform.position = pos;
-                transform.eulerAngles = rot;
-            }
-
-            offset = transform.position - target.position;
-        }
+      
 
     }
+
+  
+
+
+
 }

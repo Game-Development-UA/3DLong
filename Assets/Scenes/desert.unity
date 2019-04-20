@@ -4487,8 +4487,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31fed44ccc9d54192b725ff75e950497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.2
-  rotateSpeed: 3
+  speed: 10
+  rotateSpeed: 1.5
   sceneName: forest
 --- !u!1001 &818834813
 PrefabInstance:
@@ -10317,8 +10317,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2018271272}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.45, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.2, z: 3.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10356,6 +10356,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 813521676}
+  offset: {x: 0, y: 0, z: 0}
+  damping: 1
 --- !u!1001 &2021815994
 PrefabInstance:
   m_ObjectHideFlags: 0
