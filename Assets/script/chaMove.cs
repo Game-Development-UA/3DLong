@@ -59,12 +59,6 @@ public class chaMove : MonoBehaviour
     public string sceneName; 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "npc" && act.GetBool("attack"))
-        {
-            print("kill!!");
-            Destroy(col.gameObject);
-        }
-
         if (col.gameObject.tag == "trans") {
             SceneManager.LoadScene(sceneName);
         }

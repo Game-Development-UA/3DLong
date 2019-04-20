@@ -2,7 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface npcInterface
+public class manDeath : npcPoly
 {
-    
+
+
+    public override void Start()
+    {
+
+    }
+
 }
