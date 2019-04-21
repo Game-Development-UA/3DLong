@@ -29,6 +29,14 @@ public class npcPoly : MonoBehaviour
         npcAction.SetBool("death", true);
         sound.clip = die;
         sound.Play();
+
+        transform.GetChild(0).gameObject.SetActive(true);
+        active();
+    }
+
+    public virtual void active()
+    {
+
     }
 
 }

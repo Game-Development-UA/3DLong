@@ -7,6 +7,8 @@ TagManager:
   - tree
   - npc
   - trans
+  - women
+  - man
   layers:
   - Default
   - TransparentFX
