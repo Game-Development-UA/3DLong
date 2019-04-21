@@ -5,7 +5,12 @@ using UnityEngine;
 public class npcPoly : MonoBehaviour
 {
     public AudioClip die;
-    private AudioSource sound;
+    AudioSource sound;
+
+    [HideInInspector]
+    public GameObject player;
+
+    Animator playerActions;
 
     public virtual void Start()
     {
@@ -17,26 +22,58 @@ public class npcPoly : MonoBehaviour
 
         if (col.gameObject.name == "player")
         {
-            Animator playerActions = col.gameObject.GetComponent<Animator>();
-            if (playerActions.GetBool("attack"))
-                deathAffect();
+            player = col.gameObject;
+            playerActions = col.gameObject.GetComponent<Animator>();
+            actions();
         }
     }
 
-    public virtual void deathAffect()
+    public virtual void actions()
+    {
+        if (playerActions.GetBool("attack"))
+            StartCoroutine(deathAffect());
+    }
+
+    public virtual IEnumerator deathAffect()
+    {
+        StartCoroutine(playDeathAnime());
+        yield return new WaitForSeconds(2);
+        StartCoroutine(activeChildNpc());
+    }
+
+    public virtual IEnumerator deathAffect2()
+    {
+        StartCoroutine(playDeathAnime());
+        yield return new WaitForSeconds(2);
+        StartCoroutine(activeChildObject());
+    }
+
+    public virtual IEnumerator playDeathAnime()
     {
         Animator npcAction = transform.gameObject.GetComponent<Animator>();
         npcAction.SetBool("death", true);
+
         sound.clip = die;
         sound.Play();
 
-        transform.GetChild(0).gameObject.SetActive(true);
-        active();
+        yield return null;
     }
 
-    public virtual void active()
-    {
 
+    public virtual IEnumerator activeChildNpc()
+    {
+        transform.GetChild(0).gameObject.transform.position = transform.position;
+        transform.GetChild(0).gameObject.SetActive(true);
+
+        yield return null;
+    }
+
+
+    public virtual IEnumerator activeChildObject()
+    {
+        transform.GetChild(1).gameObject.transform.position = transform.position;
+        transform.GetChild(1).gameObject.SetActive(true);
+        yield return null;
     }
 
 }
