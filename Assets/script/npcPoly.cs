@@ -40,14 +40,14 @@ public class npcPoly : MonoBehaviour
     public virtual IEnumerator deathAffect()
     {
         StartCoroutine(playDeathAnime());
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         StartCoroutine(activeChildNpc());
     }
 
     public virtual IEnumerator deathAffect2()
     {
         StartCoroutine(playDeathAnime());
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         StartCoroutine(activeChildObject());
     }
 
@@ -69,19 +69,24 @@ public class npcPoly : MonoBehaviour
         child.transform.position = transform.position;
         child.SetActive(true);
 
+        // turn off the parent collider
+        transform.GetComponent<CapsuleCollider>().enabled = !transform.GetComponent<CapsuleCollider>().enabled;
+
         // play alive anime
         Animator childAnime = child.GetComponent<Animator>();
         childAnime.SetBool("alive", true);
 
-        yield return new WaitForSeconds(2);
+
+        yield return new WaitForSeconds(1.5f);
 
         childAnime.SetBool("alive", false);
+        
     }
 
 
     public virtual IEnumerator activeChildObject()
     {
-        //transform.GetChild(1).gameObject.transform.position = transform.position;
+        transform.GetChild(1).gameObject.transform.position = transform.position;
         transform.GetChild(1).gameObject.SetActive(true);
         yield return null;
     }
