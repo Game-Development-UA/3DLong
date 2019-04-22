@@ -5,10 +5,12 @@ using UnityEngine;
 public class CameraMove : MonoBehaviour
 {
 
-    public Transform target;//角色
-    public Vector3 offset;//角色与摄像机位置偏差值
-    private float _pointY;//玩家Y轴旋转角度
-    public float damping = 1;//摄像机旋转阻尼
+    public Transform target;
+    public float damping = 3;
+
+    [HideInInspector]
+    public Vector3 offset;
+    private float _pointY;
 
     // Use this for initialization
     void Start()
@@ -19,14 +21,10 @@ public class CameraMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
             _pointY = target.eulerAngles.y;
             Quaternion rotation = Quaternion.Euler(0, _pointY, 0);
             transform.position = Vector3.Lerp(transform.position, target.position + (rotation * offset), 2*Time.deltaTime * damping);
             transform.LookAt(target.position);
-        
-
-      
 
     }
 

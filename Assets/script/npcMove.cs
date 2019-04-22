@@ -27,7 +27,7 @@ public class npcMove: MonoBehaviour
         {
             if (timer > 2)
             {
-                dir_y = Random.Range(-50f, 50f);
+                dir_y = Random.Range(-100f, 100f);
                 timer = 0;
                 transform.Rotate(new Vector3(0, dir_y, 0));
             }
