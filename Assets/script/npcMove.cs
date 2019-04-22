@@ -23,7 +23,7 @@ public class npcMove: MonoBehaviour
         {
             speed = 4;
         }
-        if (!action.GetBool("death"))
+        if (!action.GetBool("death") && !action.GetBool("alive"))
         {
             if (timer > 2)
             {

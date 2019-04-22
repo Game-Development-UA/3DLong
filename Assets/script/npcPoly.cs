@@ -10,7 +10,8 @@ public class npcPoly : MonoBehaviour
     [HideInInspector]
     public GameObject player;
 
-    Animator playerActions;
+    [HideInInspector]
+    public Animator playerActions;
 
     public virtual void Start()
     {
@@ -19,7 +20,6 @@ public class npcPoly : MonoBehaviour
 
     public virtual void OnCollisionEnter(Collision col)
     {
-
         if (col.gameObject.name == "player")
         {
             player = col.gameObject;
@@ -31,7 +31,10 @@ public class npcPoly : MonoBehaviour
     public virtual void actions()
     {
         if (playerActions.GetBool("attack"))
+        {
             StartCoroutine(deathAffect());
+        }
+
     }
 
     public virtual IEnumerator deathAffect()
@@ -62,10 +65,17 @@ public class npcPoly : MonoBehaviour
 
     public virtual IEnumerator activeChildNpc()
     {
-        transform.GetChild(0).gameObject.transform.position = transform.position;
-        transform.GetChild(0).gameObject.SetActive(true);
+        GameObject child = transform.GetChild(0).gameObject;
+        child.transform.position = transform.position;
+        child.SetActive(true);
 
-        yield return null;
+        // play alive anime
+        Animator childAnime = child.GetComponent<Animator>();
+        childAnime.SetBool("alive", true);
+
+        yield return new WaitForSeconds(2);
+
+        childAnime.SetBool("alive", false);
     }
 
 
