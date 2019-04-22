@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class womenDeath : npcPoly
+public class womanDeath : npcPoly
 {
 
     public override void actions()

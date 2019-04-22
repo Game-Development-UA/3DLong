@@ -324,8 +324,8 @@ GameObject:
   - component: {fileID: 54480399812433893}
   - component: {fileID: 54480399812433891}
   - component: {fileID: 54480399812433890}
-  - component: {fileID: 54480399812433889}
   - component: {fileID: 54480399812433888}
+  - component: {fileID: 8992412643103865162}
   m_Layer: 0
   m_Name: wnpc2
   m_TagString: npc
@@ -502,21 +502,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &54480399812433889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54480399812433903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5eb09f8e62b04efcaca7c626e7e4d11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  die: {fileID: 8300000, guid: 650335eb9cf5f4b0c8e6272624d75d53, type: 3}
-  player: {fileID: 0}
-  playerActions: {fileID: 0}
 --- !u!114 &54480399812433888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -530,6 +515,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!114 &8992412643103865162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54480399812433903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ece268f17de4ab0aba2ff23b169f3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  die: {fileID: 8300000, guid: 650335eb9cf5f4b0c8e6272624d75d53, type: 3}
+  player: {fileID: 0}
+  playerActions: {fileID: 0}
 --- !u!1 &54480399841099269
 GameObject:
   m_ObjectHideFlags: 0

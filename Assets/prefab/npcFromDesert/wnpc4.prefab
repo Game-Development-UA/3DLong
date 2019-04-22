@@ -2073,8 +2073,8 @@ GameObject:
   - component: {fileID: 6753838086944520697}
   - component: {fileID: 6753838086944520696}
   - component: {fileID: 6753838086944520703}
-  - component: {fileID: 6753838086944520699}
   - component: {fileID: 6753838086944520698}
+  - component: {fileID: 4907401503451011798}
   m_Layer: 0
   m_Name: wnpc4
   m_TagString: npc
@@ -2253,21 +2253,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6753838086944520699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6753838086944520693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5eb09f8e62b04efcaca7c626e7e4d11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  die: {fileID: 8300000, guid: 650335eb9cf5f4b0c8e6272624d75d53, type: 3}
-  player: {fileID: 0}
-  playerActions: {fileID: 0}
 --- !u!114 &6753838086944520698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2281,6 +2266,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!114 &4907401503451011798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6753838086944520693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ece268f17de4ab0aba2ff23b169f3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  die: {fileID: 8300000, guid: 650335eb9cf5f4b0c8e6272624d75d53, type: 3}
+  player: {fileID: 0}
+  playerActions: {fileID: 0}
 --- !u!1 &6753838086971512749
 GameObject:
   m_ObjectHideFlags: 0
