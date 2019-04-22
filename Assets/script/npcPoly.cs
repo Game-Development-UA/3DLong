@@ -22,8 +22,10 @@ public class npcPoly : MonoBehaviour
     {
         if (col.gameObject.name == "player")
         {
+            // set player
             player = col.gameObject;
             playerActions = col.gameObject.GetComponent<Animator>();
+
             actions();
         }
     }
@@ -34,11 +36,11 @@ public class npcPoly : MonoBehaviour
         {
             StartCoroutine(deathAffect());
         }
-
     }
 
     public virtual IEnumerator deathAffect()
     {
+        print("affect1");
         StartCoroutine(playDeathAnime());
         yield return new WaitForSeconds(2);
         StartCoroutine(activeChildNpc());
@@ -46,6 +48,7 @@ public class npcPoly : MonoBehaviour
 
     public virtual IEnumerator deathAffect2()
     {
+        print("affect2");
         StartCoroutine(playDeathAnime());
         yield return new WaitForSeconds(2);
         StartCoroutine(activeChildObject());
@@ -88,7 +91,9 @@ public class npcPoly : MonoBehaviour
     {
         transform.GetChild(1).gameObject.transform.position = transform.position;
         transform.GetChild(1).gameObject.SetActive(true);
-        yield return null;
+
+        yield return new WaitForSeconds(1);
+
     }
 
 }

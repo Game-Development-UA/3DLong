@@ -9,6 +9,7 @@ public class womenDeath : npcPoly
     {
         if (player.tag == "man" && playerActions.GetBool("attack"))
             StartCoroutine(deathAffect2());
+
         else
             base.actions();
     }
