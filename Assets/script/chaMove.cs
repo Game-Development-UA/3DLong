@@ -43,7 +43,7 @@ public class chaMove : MonoBehaviour
         }
 
         // attack
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.J))
         {
             timer = 0;
             act.SetBool("attack", true);
