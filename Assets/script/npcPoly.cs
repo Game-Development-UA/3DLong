@@ -36,11 +36,15 @@ public class npcPoly : MonoBehaviour
         {
             StartCoroutine(deathAffect());
         }
+        else if(playerActions.GetBool("dance"))
+        {
+
+        }
     }
 
     public virtual IEnumerator deathAffect()
     {
-        print("affect1");
+        Debug.Log("affect1");
         StartCoroutine(playDeathAnime());
         yield return new WaitForSeconds(2);
         StartCoroutine(activeChildNpc());
@@ -48,7 +52,7 @@ public class npcPoly : MonoBehaviour
 
     public virtual IEnumerator deathAffect2()
     {
-        print("affect2");
+        Debug.Log("affect2");
         StartCoroutine(playDeathAnime());
         yield return new WaitForSeconds(2);
         StartCoroutine(activeChildObject());
