@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class chaMove : MonoBehaviour
 {
     public float speed = 10f;
-    public float rotateSpeed = 1.5F;
+    public float rotateSpeed = 2F;
 
     private Transform tran;
     private Animator act;

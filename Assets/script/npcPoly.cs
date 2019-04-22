@@ -40,14 +40,14 @@ public class npcPoly : MonoBehaviour
     public virtual IEnumerator deathAffect()
     {
         StartCoroutine(playDeathAnime());
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         StartCoroutine(activeChildNpc());
     }
 
     public virtual IEnumerator deathAffect2()
     {
         StartCoroutine(playDeathAnime());
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         StartCoroutine(activeChildObject());
     }
 
@@ -81,7 +81,7 @@ public class npcPoly : MonoBehaviour
 
     public virtual IEnumerator activeChildObject()
     {
-        transform.GetChild(1).gameObject.transform.position = transform.position;
+        //transform.GetChild(1).gameObject.transform.position = transform.position;
         transform.GetChild(1).gameObject.SetActive(true);
         yield return null;
     }

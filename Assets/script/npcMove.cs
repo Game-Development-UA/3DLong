@@ -43,7 +43,7 @@ public class npcMove: MonoBehaviour
         {
             speed = 80;
             timer = 0;
-            dir_y = Random.Range(-100f, 100f);
+            dir_y = Random.Range(-180f, 180f);
             transform.Rotate(new Vector3(0, dir_y, 0));
             transform.position += transform.up * speed*2 * Time.deltaTime;
         }
