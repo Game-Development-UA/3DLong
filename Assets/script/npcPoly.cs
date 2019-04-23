@@ -96,7 +96,7 @@ public class npcPoly : MonoBehaviour
         transform.GetChild(1).gameObject.transform.position = transform.position;
         transform.GetChild(1).gameObject.SetActive(true);
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
 
     }
 

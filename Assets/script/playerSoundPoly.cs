@@ -15,13 +15,22 @@ public class playerSoundPoly : MonoBehaviour
         sounds = transform.gameObject.GetComponent<AudioSource>();
     }
 
+    private float timer = 0;
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
         // normal attack
-        if (Input.GetKey(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.J))
         {
+            timer = 0;
             attack1();
+        }
+
+        // pray
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+
         }
     }
 
@@ -29,5 +38,8 @@ public class playerSoundPoly : MonoBehaviour
     {
         sounds.clip = flight;
         sounds.Play();
+
+        if (timer > 0.4)
+            sounds.Stop();
     }
 }

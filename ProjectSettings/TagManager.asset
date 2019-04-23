@@ -9,6 +9,7 @@ TagManager:
   - trans
   - man
   - woman
+  - mile
   layers:
   - Default
   - TransparentFX
