@@ -23,8 +23,9 @@ public class chaMove : MonoBehaviour
         timer += Time.deltaTime;
 
         // move
-        if (Input.GetKey(KeyCode.W) && !act.GetBool("dance"))
+        if (Input.GetKey(KeyCode.W))
         {
+            act.SetBool("dance", false);
             tran.Translate(Vector3.forward * speed * Time.deltaTime);
             act.SetBool("run", true);
         }
@@ -60,13 +61,18 @@ public class chaMove : MonoBehaviour
             timer = 0;
             act.SetBool("dance", true);
         }
-        else if (timer > 3 && act.GetBool("dance"))
+        else if (timer > 6 && act.GetBool("dance"))
         {
             Debug.Log("turn off dance");
             act.SetBool("dance", false);
         }
 
         // pick up
+        if (Input.GetKey(KeyCode.S))
+        {
+
+
+        }
 
 
     }

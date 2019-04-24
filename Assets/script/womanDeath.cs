@@ -7,7 +7,8 @@ public class womanDeath : npcPoly
 
     public override void actions()
     {
-        if (player.tag == "man" && playerActions.GetBool("attack"))
+        if (player.tag == "man" && playerActions.GetBool("attack")
+            && !thisAnime.GetBool("alive") && !thisAnime.GetBool("dance") && !thisAnime.GetBool("death"))
             StartCoroutine(deathAffect2());
 
         else

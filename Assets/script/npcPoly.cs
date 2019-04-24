@@ -13,9 +13,15 @@ public class npcPoly : MonoBehaviour
     [HideInInspector]
     public Animator playerActions;
 
+    [HideInInspector]
+    public Animator thisAnime;
+
+
     public virtual void Start()
     {
         sound = transform.gameObject.GetComponent<AudioSource>();
+
+        thisAnime = transform.gameObject.GetComponent<Animator>();
     }
 
     public virtual void OnCollisionEnter(Collision col)
@@ -32,14 +38,27 @@ public class npcPoly : MonoBehaviour
 
     public virtual void actions()
     {
-        if (playerActions.GetBool("attack"))
+        // if attack by player
+        if (playerActions.GetBool("attack") && !thisAnime.GetBool("alive") 
+            && !thisAnime.GetBool("dance") && !thisAnime.GetBool("death"))
         {
             StartCoroutine(deathAffect());
         }
-        else if(playerActions.GetBool("dance"))
-        {
 
+        // if player dance
+        else if(playerActions.GetBool("dance") && !thisAnime.GetBool("death"))
+        {
+            StartCoroutine(dance());
         }
+    }
+
+    public virtual IEnumerator dance()
+    {
+        thisAnime.SetBool("dance", true);
+
+        yield return new WaitForSeconds(6);
+
+        thisAnime.SetBool("dance", false);
     }
 
     public virtual IEnumerator deathAffect()
@@ -83,8 +102,7 @@ public class npcPoly : MonoBehaviour
         Animator childAnime = child.GetComponent<Animator>();
         childAnime.SetBool("alive", true);
 
-
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(3);
 
         childAnime.SetBool("alive", false);
         
