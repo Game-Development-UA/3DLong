@@ -530,6 +530,7 @@ MonoBehaviour:
   die: {fileID: 8300000, guid: 650335eb9cf5f4b0c8e6272624d75d53, type: 3}
   player: {fileID: 0}
   playerActions: {fileID: 0}
+  thisAnime: {fileID: 0}
 --- !u!1 &54480399841099269
 GameObject:
   m_ObjectHideFlags: 0
@@ -2589,7 +2590,7 @@ GameObject:
   - component: {fileID: 1973831693409665254}
   m_Layer: 0
   m_Name: 1
-  m_TagString: Untagged
+  m_TagString: flower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

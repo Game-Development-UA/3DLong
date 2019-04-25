@@ -691,6 +691,7 @@ MonoBehaviour:
   die: {fileID: 8300000, guid: 650335eb9cf5f4b0c8e6272624d75d53, type: 3}
   player: {fileID: 0}
   playerActions: {fileID: 0}
+  thisAnime: {fileID: 0}
 --- !u!1 &267765338397793517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2587,7 +2588,7 @@ GameObject:
   - component: {fileID: 8453356495496422309}
   m_Layer: 0
   m_Name: 1
-  m_TagString: Untagged
+  m_TagString: flower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2607,6 +2608,20 @@ Transform:
   m_Father: {fileID: 267765338362527524}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &7116748798674521674
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6911221292240619912}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: c9ce8f855ca8c98449df4090174b5cd0, type: 3}
 --- !u!1001 &134501241447617906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2689,8 +2704,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1428552154430126446, guid: 84fdd041095a643b8b42ac42fe80f840, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 84fdd041095a643b8b42ac42fe80f840, type: 3}
+--- !u!1 &6911221292240619912 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6788137466181967098, guid: 84fdd041095a643b8b42ac42fe80f840,
+    type: 3}
+  m_PrefabInstance: {fileID: 134501241447617906}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1103830333215031935 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1048300758795081485, guid: 84fdd041095a643b8b42ac42fe80f840,

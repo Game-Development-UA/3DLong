@@ -51,7 +51,6 @@ public class chaMove : MonoBehaviour
         }
         else if (timer > 1 && act.GetBool("attack"))
         {
-            Debug.Log("turn off attack");
             act.SetBool("attack", false);
         }
 
@@ -63,15 +62,18 @@ public class chaMove : MonoBehaviour
         }
         else if (timer > 6 && act.GetBool("dance"))
         {
-            Debug.Log("turn off dance");
             act.SetBool("dance", false);
         }
 
         // pick up
         if (Input.GetKey(KeyCode.S))
         {
-
-
+            timer = 0;
+            act.SetBool("pick", true);
+        }
+        else if (timer > 1 && act.GetBool("pick"))
+        {
+            act.SetBool("pick", false);
         }
 
 
