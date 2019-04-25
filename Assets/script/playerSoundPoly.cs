@@ -23,7 +23,7 @@ public class playerSoundPoly : MonoBehaviour
         act = transform.gameObject.GetComponent<Animator>();
     }
 
- 
+    
     // Update is called once per frame
     void Update()
     {
@@ -44,17 +44,18 @@ public class playerSoundPoly : MonoBehaviour
         {
             pick();
         }
+        
 
-        if (!act.GetBool("dance"))
-            sounds.Stop();
         
     }
 
     public virtual void dance()
     {
         sounds.clip = dan;
-        sounds.Play();
+        // play in chaMove.cs
     }
+
+   
 
     public virtual void pick()
     {

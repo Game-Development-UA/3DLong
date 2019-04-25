@@ -10,11 +10,15 @@ public class chaMove : MonoBehaviour
 
     private Transform tran;
     private Animator act;
+    private AudioSource sound;
+    private AudioSource bgm;
 
     void Start()
     {
         tran = gameObject.GetComponent<Transform>();
         act = gameObject.GetComponent<Animator>();
+        sound = gameObject.GetComponent<AudioSource>();
+        bgm = gameObject.transform.GetChild(0).GetComponent<AudioSource>();
     }
 
     private float timer = 0;
@@ -25,7 +29,13 @@ public class chaMove : MonoBehaviour
         // move
         if (Input.GetKey(KeyCode.W))
         {
-            act.SetBool("dance", false);
+            if (act.GetBool("dance"))
+            {
+                act.SetBool("dance", false);
+                sound.Stop();
+                bgm.Play();
+            }
+
             tran.Translate(Vector3.forward * speed * Time.deltaTime);
             act.SetBool("run", true);
         }
@@ -58,10 +68,14 @@ public class chaMove : MonoBehaviour
         if (Input.GetKey(KeyCode.K))
         {
             timer = 0;
+            sound.Play();
+            bgm.Stop();
             act.SetBool("dance", true);
         }
         else if (timer > 6 && act.GetBool("dance"))
         {
+            sound.Stop();
+            bgm.Play();
             act.SetBool("dance", false);
         }
 
