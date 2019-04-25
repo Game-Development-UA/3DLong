@@ -10,6 +10,7 @@ TagManager:
   - man
   - woman
   - mile
+  - flower
   layers:
   - Default
   - TransparentFX

@@ -8,55 +8,60 @@ public class playerSoundPoly : MonoBehaviour
     public AudioClip pickup;
     public AudioClip nopick;
     public AudioClip get;
+    public AudioClip dan;
 
     private AudioSource sounds;
+    private Animator act;
 
-    [HideInInspector]
-    public int isFlower = 0;
+    int picking = 0;
+    int isFlower = 0;
 
     // Start is called before the first frame update
     public void Start()
     {
         sounds = transform.gameObject.GetComponent<AudioSource>();
-
+        act = transform.gameObject.GetComponent<Animator>();
     }
 
-    private float timer = 0;
+ 
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
         // normal attack
         if (Input.GetKeyDown(KeyCode.J))
         {
-            timer = 0;
             attack();
-            if (timer > 0.4)
-                sounds.Stop();
         }
 
-        // pray
+        // dance
         if (Input.GetKeyDown(KeyCode.K))
         {
-
+            dance();
         }
 
         // pick up
         if (Input.GetKeyDown(KeyCode.S))
         {
-            timer = 0;
             pick();
-            if (timer > 0.4)
-                sounds.Stop();
         }
+
+        if (!act.GetBool("dance"))
+            sounds.Stop();
+        
+    }
+
+    public virtual void dance()
+    {
+        sounds.clip = dan;
+        sounds.Play();
     }
 
     public virtual void pick()
     {
-        if (isFlower == 1)
-            pickup1();
-        else
+        if (isFlower == 0)
             noPickUp();
+        else
+            pickup1();
     }
 
     public virtual void attack()
@@ -82,17 +87,5 @@ public class playerSoundPoly : MonoBehaviour
         sounds.Play();
     }
 
-    private void OnCollisionEnter(Collision col)
-    {
-        if (col.gameObject.GetComponentInParent<Transform>().tag == "flower")
-        {
-            print("flower");
-            isFlower = 1;
-        }
-        else
-        {
-            isFlower = 0;
-        }
-    }
 
 }
