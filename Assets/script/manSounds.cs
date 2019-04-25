@@ -8,6 +8,12 @@ public class manSounds : playerSoundPoly
 
     private void OnCollisionEnter(Collision col)
     {
+        if (col.gameObject.tag == "mile")
+        {
+            isMile = true;
+            mile = col.gameObject;
+        }
+
         Animator npcAct = col.gameObject.GetComponent<Animator>();
         if (npcAct.GetBool("death"))
         {
@@ -16,7 +22,9 @@ public class manSounds : playerSoundPoly
                 isFlower = true;
                 flower = col.gameObject.transform.GetChild(1).gameObject;
             }
+
         }
+
     }
 
 

@@ -4504,7 +4504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  rotateSpeed: 1.5
+  rotateSpeed: 3
   sceneName: forest
 --- !u!1001 &818834813
 PrefabInstance:
@@ -7673,6 +7673,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1632260231}
+    - target: {fileID: 1436107484130584994, guid: 557927d321ec24669ab18ab8188e121b,
+        type: 3}
+      propertyPath: damping
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 557927d321ec24669ab18ab8188e121b, type: 3}
 --- !u!1001 &1417977335
@@ -10689,9 +10694,14 @@ MonoBehaviour:
   nopick: {fileID: 8300000, guid: d87cb92fd7f1f4d819d129c78792831c, type: 3}
   get: {fileID: 8300000, guid: ae674fde2b21545b59a5e544442bf2eb, type: 3}
   dan: {fileID: 8300000, guid: 54a0574b2e7a040ef9840e006fea9a48, type: 3}
+  numOfStone: 0
+  goal: 5
   isFlower: 0
   flower: {fileID: 0}
+  isMile: 0
+  mile: {fileID: 0}
   numOfFlower: 0
+  sceneName: forest
 --- !u!1 &1632488681
 GameObject:
   m_ObjectHideFlags: 0

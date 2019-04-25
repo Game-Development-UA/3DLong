@@ -717,12 +717,16 @@ MonoBehaviour:
 
     Press "W" for going forward
 
-    Pree "Q" to attack
+    Press "J" to attack
+
+    Press "K" to dance
+
+    Press "S" to pick
 
     Press Space to fly
 
 
-    Kill yourself as much as you can
+    Kill others to get the hints, pick up the hints you found
 
     NPCs will bounce when touch the trees or mountains
 
@@ -774,7 +778,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 98
+  m_firstOverflowCharacterIndex: 116
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -797,12 +801,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 0}
-    characterCount: 252
+    characterCount: 315
     spriteCount: 0
-    spaceCount: 47
-    wordCount: 46
+    spaceCount: 60
+    wordCount: 59
     linkCount: 0
-    lineCount: 8
+    lineCount: 10
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0

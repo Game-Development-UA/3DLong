@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerSoundPoly : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class playerSoundPoly : MonoBehaviour
     public AudioClip get;
     public AudioClip dan;
 
+    [SerializeField]
+    private int numOfStone = 0;
+    public int goal;
+
     private AudioSource sounds;
     private Animator act;
 
@@ -18,8 +23,15 @@ public class playerSoundPoly : MonoBehaviour
     [HideInInspector]
     public GameObject flower;
 
+    [HideInInspector]
+    public bool isMile = false;
+    [HideInInspector]
+    public GameObject mile;
+
     [SerializeField]
     private int numOfFlower = 0;
+
+    public string sceneName;
 
     // Start is called before the first frame update
     public void Start()
@@ -32,6 +44,10 @@ public class playerSoundPoly : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (numOfStone == goal)
+        {
+            SceneManager.LoadScene(sceneName);
+        }
         // normal attack
         if (Input.GetKeyDown(KeyCode.J))
         {
@@ -49,8 +65,32 @@ public class playerSoundPoly : MonoBehaviour
         {
             pick();
         }
-        
 
+        // set flower
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            StartCoroutine(set());
+        }
+
+    }
+
+    public virtual IEnumerator set()
+    {
+        if (isMile == false || numOfFlower < 1)
+            noPickUp();
+        else
+        {
+            sounds.clip = get;
+            sounds.Play();
+
+            mile.transform.GetChild(0).gameObject.SetActive(true);
+
+            yield return new WaitForSeconds(1);
+
+            numOfStone += 1;
+            numOfFlower -= 1;
+            isMile = false;
+        }
     }
 
     public virtual void dance()
