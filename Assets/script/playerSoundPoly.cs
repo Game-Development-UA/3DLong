@@ -13,8 +13,13 @@ public class playerSoundPoly : MonoBehaviour
     private AudioSource sounds;
     private Animator act;
 
-    int picking = 0;
-    int isFlower = 0;
+    [HideInInspector]
+    public bool isFlower = false;
+    [HideInInspector]
+    public GameObject flower;
+
+    [SerializeField]
+    private int numOfFlower = 0;
 
     // Start is called before the first frame update
     public void Start()
@@ -46,7 +51,6 @@ public class playerSoundPoly : MonoBehaviour
         }
         
 
-        
     }
 
     public virtual void dance()
@@ -56,13 +60,12 @@ public class playerSoundPoly : MonoBehaviour
     }
 
    
-
     public virtual void pick()
     {
-        if (isFlower == 0)
+        if (!isFlower)
             noPickUp();
         else
-            pickup1();
+            StartCoroutine(pickup1());
     }
 
     public virtual void attack()
@@ -76,10 +79,18 @@ public class playerSoundPoly : MonoBehaviour
         sounds.Play();
     }
 
-    public virtual void pickup1()
+    public virtual IEnumerator pickup1()
     {
         sounds.clip = pickup;
         sounds.Play();
+
+        yield return new WaitForSeconds(1);
+        numOfFlower += 1;
+        isFlower = false;
+
+        yield return new WaitForSeconds(1);
+        Destroy(flower);
+
     }
 
     public virtual void noPickUp()

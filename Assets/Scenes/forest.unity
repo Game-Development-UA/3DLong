@@ -333,6 +333,9 @@ MonoBehaviour:
   nopick: {fileID: 8300000, guid: d87cb92fd7f1f4d819d129c78792831c, type: 3}
   get: {fileID: 8300000, guid: ae674fde2b21545b59a5e544442bf2eb, type: 3}
   dan: {fileID: 8300000, guid: 54a0574b2e7a040ef9840e006fea9a48, type: 3}
+  isFlower: 0
+  flower: {fileID: 0}
+  numOfFlower: 0
 --- !u!1001 &17685903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4306,7 +4309,7 @@ GameObject:
   - component: {fileID: 646240946}
   m_Layer: 1
   m_Name: wall
-  m_TagString: tree
+  m_TagString: trans
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13883,7 +13886,7 @@ GameObject:
   - component: {fileID: 1549149455}
   m_Layer: 1
   m_Name: wall (3)
-  m_TagString: tree
+  m_TagString: trans
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15336,7 +15339,7 @@ GameObject:
   - component: {fileID: 1774003839}
   m_Layer: 1
   m_Name: wall (1)
-  m_TagString: tree
+  m_TagString: trans
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18633,7 +18636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 646240945, guid: 9b7b3902a7a77423087a076b17343532, type: 3}
       propertyPath: m_TagString
-      value: tree
+      value: trans
       objectReference: {fileID: 0}
     - target: {fileID: 646240949, guid: 9b7b3902a7a77423087a076b17343532, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18696,7 +18699,7 @@ PrefabInstance:
     - target: {fileID: 7797281745959404187, guid: 9f5583163448840c292b8736f701a48a,
         type: 3}
       propertyPath: m_TagString
-      value: tree
+      value: trans
       objectReference: {fileID: 0}
     - target: {fileID: 7797281745959404191, guid: 9f5583163448840c292b8736f701a48a,
         type: 3}
