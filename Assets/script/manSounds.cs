@@ -14,15 +14,31 @@ public class manSounds : playerSoundPoly
             mile = col.gameObject;
         }
 
-        Animator npcAct = col.gameObject.GetComponent<Animator>();
-        if (npcAct.GetBool("death"))
+        if (col.gameObject.tag == "npc")
         {
-            if(col.gameObject.transform.GetChild(1).tag == "flower")
+            Animator npcAct = col.gameObject.GetComponent<Animator>();
+            if (npcAct.GetBool("death"))
             {
-                isFlower = true;
-                flower = col.gameObject.transform.GetChild(1).gameObject;
-            }
+                if (col.gameObject.transform.GetChild(1).tag == "flower")
+                {
+                    isFlower = true;
+                    flower = col.gameObject.transform.GetChild(1).gameObject;
+                }
 
+            }
+        }
+
+    }
+
+    private void OnCollisionExit(Collision col)
+    {
+        if (col.gameObject.tag == "mile")
+        {
+            isMile = false;
+        }
+        if (col.gameObject.tag == "npc")
+        {
+            isFlower = false;
         }
 
     }

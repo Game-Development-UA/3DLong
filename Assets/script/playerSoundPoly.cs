@@ -77,7 +77,10 @@ public class playerSoundPoly : MonoBehaviour
     public virtual IEnumerator set()
     {
         if (isMile == false || numOfFlower < 1)
+        {
             noPickUp();
+            yield return null;
+        }
         else
         {
             sounds.clip = get;
