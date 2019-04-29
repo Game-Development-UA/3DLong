@@ -17965,6 +17965,31 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 758796526664817640, guid: 048f3cdb8e12d40b6af3e4c9d2216dcb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 758796526664817640, guid: 048f3cdb8e12d40b6af3e4c9d2216dcb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Load
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197959451864766965, guid: 048f3cdb8e12d40b6af3e4c9d2216dcb,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197959451864766965, guid: 048f3cdb8e12d40b6af3e4c9d2216dcb,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 274933232735214992, guid: 048f3cdb8e12d40b6af3e4c9d2216dcb,
+        type: 3}
+      propertyPath: m_Text
+      value: Begin again
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 048f3cdb8e12d40b6af3e4c9d2216dcb, type: 3}
 --- !u!1001 &2119542358

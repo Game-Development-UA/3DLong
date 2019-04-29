@@ -15037,5 +15037,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 274933232735214992, guid: 048f3cdb8e12d40b6af3e4c9d2216dcb,
+        type: 3}
+      propertyPath: m_Text
+      value: Begin again
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 048f3cdb8e12d40b6af3e4c9d2216dcb, type: 3}
