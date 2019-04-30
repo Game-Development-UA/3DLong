@@ -108,7 +108,6 @@ public class npcPoly : MonoBehaviour
         yield return new WaitForSeconds(3);
 
         childAnime.SetBool("alive", false);
-        
     }
 
 

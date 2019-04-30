@@ -11,8 +11,8 @@ public class playerSoundPoly : MonoBehaviour
     public AudioClip get;
     public AudioClip dan;
 
-    [SerializeField]
-    private int numOfStone = 0;
+    [HideInInspector]
+    public int numOfStone = 0;
     public int goal;
 
     private AudioSource sounds;

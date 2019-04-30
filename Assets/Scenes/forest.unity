@@ -8751,6 +8751,7 @@ GameObject:
   - component: {fileID: 14071443}
   - component: {fileID: 14071448}
   - component: {fileID: 1068107648}
+  - component: {fileID: 1068107649}
   m_Layer: 0
   m_Name: player
   m_TagString: man
@@ -8768,6 +8769,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 552cc677bf1c04126ac485236707203f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  num: 0
+  numOfStone: 0
+--- !u!114 &1068107649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068107647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ebec66b12a6343988e6863c2ac70e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1068341889
@@ -18748,6 +18763,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 620508211472040579, guid: 73ec2b3cf4b874a7da16ee9d923a6d80,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SaveAndBack
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73ec2b3cf4b874a7da16ee9d923a6d80, type: 3}
 --- !u!1 &3859832238929297405
@@ -19031,8 +19051,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -314, y: 201}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -314, y: 170.6}
+  m_SizeDelta: {x: 160, y: 90.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6732448572034547158
 CanvasRenderer:

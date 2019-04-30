@@ -6,9 +6,11 @@ using UnityEngine.UI;
 public class changeMsg : MonoBehaviour
 {
     string hint = "Hint: ";
-    string flower = "Flower: ";
+  
 
-    int num;
+    public int num;
+    public int numOfStone;
+
     int errPick;
     int errSet;
 
@@ -47,7 +49,9 @@ public class changeMsg : MonoBehaviour
         msg.text = hint + text;
 
         num = data.numOfFlower;
-        numOfFlower.text = flower + num;
+        numOfStone = data.numOfStone;
+        numOfFlower.text = "Flower: " + num + "\nStone: " + numOfStone;
+        
 
         errPick = data.errorPick;
         errSet = data.errorSet;
