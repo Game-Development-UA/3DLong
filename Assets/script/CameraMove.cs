@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class CameraMove : MonoBehaviour
 {
 
@@ -19,7 +20,7 @@ public class CameraMove : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
             _pointY = target.eulerAngles.y;
             Quaternion rotation = Quaternion.Euler(0, _pointY, 0);

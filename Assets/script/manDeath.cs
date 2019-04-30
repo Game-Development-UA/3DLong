@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class manDeath : npcPoly
 {
 
@@ -16,5 +18,7 @@ public class manDeath : npcPoly
             base.actions();
 
     }
+
+
 
 }

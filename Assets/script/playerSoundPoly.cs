@@ -28,8 +28,8 @@ public class playerSoundPoly : MonoBehaviour
     [HideInInspector]
     public GameObject mile;
 
-    [SerializeField]
-    private int numOfFlower = 0;
+    [HideInInspector]
+    public int numOfFlower = 0;
 
     public string sceneName;
 
@@ -71,6 +71,7 @@ public class playerSoundPoly : MonoBehaviour
         {
             StartCoroutine(set());
         }
+
 
     }
 

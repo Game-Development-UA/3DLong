@@ -36,10 +36,6 @@ public class manSounds : playerSoundPoly
         {
             isMile = false;
         }
-        if (col.gameObject.tag == "npc")
-        {
-            isFlower = false;
-        }
 
     }
 

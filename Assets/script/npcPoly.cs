@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
+
 
 public class npcPoly : MonoBehaviour
 {
@@ -56,10 +58,11 @@ public class npcPoly : MonoBehaviour
     {
         thisAnime.SetBool("dance", true);
 
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(5);
 
         thisAnime.SetBool("dance", false);
     }
+
 
     public virtual IEnumerator deathAffect()
     {
