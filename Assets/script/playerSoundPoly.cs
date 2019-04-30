@@ -30,6 +30,10 @@ public class playerSoundPoly : MonoBehaviour
 
     [HideInInspector]
     public int numOfFlower = 0;
+    [HideInInspector]
+    public int errorPick = 0;
+    [HideInInspector]
+    public int errorSet = 0;
 
     public string sceneName;
 
@@ -63,7 +67,7 @@ public class playerSoundPoly : MonoBehaviour
         // pick up
         if (Input.GetKeyDown(KeyCode.S))
         {
-            pick();
+            StartCoroutine(pick());
         }
 
         // set flower
@@ -80,20 +84,33 @@ public class playerSoundPoly : MonoBehaviour
         if (isMile == false || numOfFlower < 1)
         {
             noPickUp();
-            yield return null;
+            errorSet = 1;
+            yield return new WaitForSeconds(3);
+            errorSet = 0;
         }
         else
         {
-            sounds.clip = get;
-            sounds.Play();
+            GameObject active = mile.transform.GetChild(0).gameObject;
+            if (!active.activeSelf)
+            {
+                sounds.clip = get;
+                sounds.Play();
 
-            mile.transform.GetChild(0).gameObject.SetActive(true);
+                active.SetActive(true);
 
-            yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(1);
 
-            numOfStone += 1;
-            numOfFlower -= 1;
-            isMile = false;
+                numOfStone += 1;
+                numOfFlower -= 1;
+                isMile = false;
+            }
+            else
+            {
+                noPickUp();
+                errorSet = 1;
+                yield return new WaitForSeconds(3);
+                errorSet = 0;
+            }
         }
     }
 
@@ -104,10 +121,15 @@ public class playerSoundPoly : MonoBehaviour
     }
 
    
-    public virtual void pick()
+    public virtual IEnumerator pick()
     {
         if (!isFlower)
+        {
+            errorPick = 1;
             noPickUp();
+            yield return new WaitForSeconds(3);
+            errorPick = 0;
+        }
         else
             StartCoroutine(pickup1());
     }
