@@ -20,6 +20,12 @@ public class setUpMemFromBin : MonoBehaviour
             player.GetComponent<manSounds>().numOfStone =
                                         global.globalControl.save.numOfStone;
 
+            GameObject cam = GameObject.Find("MainCamera");
+
+            cam.transform.Translate(new Vector3(global.globalControl.save.cx,
+                                         global.globalControl.save.cy,
+                                         global.globalControl.save.cz));
+
             global.globalControl.isLoad = 0;
         }
     }

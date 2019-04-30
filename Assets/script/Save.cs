@@ -10,6 +10,10 @@ public class Save
     public float y;
     public float z;
 
+    public float cx;
+    public float cy;
+    public float cz;
+
     public int numOfFlower;
     public int numOfStone;
 

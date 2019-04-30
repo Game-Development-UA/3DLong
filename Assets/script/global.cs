@@ -6,7 +6,7 @@ public class global : MonoBehaviour
 {
     public static global globalControl;
 
-    public int isLoad;
+    public int isLoad = 0;
     public int isSave = 0;
     public Save save;
 

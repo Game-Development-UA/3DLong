@@ -46,6 +46,11 @@ public class LoadScene : MonoBehaviour
         save.numOfFlower = player.GetComponent<manSounds>().numOfFlower;
         save.numOfStone = player.GetComponent<manSounds>().numOfStone;
 
+        GameObject cam = GameObject.Find("MainCamera");
+        save.cx = cam.transform.position.x;
+        save.cy = cam.transform.position.y;
+        save.cz = cam.transform.position.z;
+
         if (player.tag == "woman")
         {
             save.nameOfScene = "desert";

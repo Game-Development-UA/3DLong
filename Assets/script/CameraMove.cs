@@ -28,9 +28,9 @@ public class CameraMove : MonoBehaviour
             transform.LookAt(target.position);
 
     }
+    
 
   
-
 
 
 }
