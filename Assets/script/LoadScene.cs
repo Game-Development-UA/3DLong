@@ -67,7 +67,7 @@ public class LoadScene : MonoBehaviour
         Save save = saveGO();
         BinaryFormatter bf = new BinaryFormatter();
 
-        FileStream fileStream = File.Create(Application.dataPath + "/script/stream" + "/byBin.txt");
+        FileStream fileStream = File.Create(Application.dataPath + "/byBin.txt");
         bf.Serialize(fileStream, save);
         fileStream.Close();
     }
@@ -77,7 +77,7 @@ public class LoadScene : MonoBehaviour
         global.globalControl.isLoad = 1;
 
         BinaryFormatter bf = new BinaryFormatter();
-        FileStream fileStream = File.Open(Application.dataPath + "/script/stream" + "/byBin.txt", FileMode.Open);
+        FileStream fileStream = File.Open(Application.dataPath + "/byBin.txt", FileMode.Open);
 
         Save save = (Save)bf.Deserialize(fileStream);
         fileStream.Close();
